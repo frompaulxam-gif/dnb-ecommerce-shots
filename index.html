@@ -17,9 +17,11 @@
     -webkit-font-smoothing:antialiased;}
   .wrap{max-width:880px;margin:0 auto;padding:32px 20px 80px;
     display:flex;flex-direction:column;gap:26px;}
-  .sheet{background:var(--sheet);border:1px solid var(--rule);border-radius:2px;
-    padding:34px 38px 38px;box-shadow:0 1px 2px rgba(21,25,23,.05),0 18px 40px -34px rgba(21,25,23,.5);}
-  @media (max-width:640px){.sheet{padding:24px 20px 26px;} .wrap{padding:20px 12px 60px;gap:16px;}}
+  .sheet{background:var(--sheet);border:1px solid var(--rule);
+    aspect-ratio:210/297;display:flex;flex-direction:column;overflow:hidden;
+    padding:clamp(22px,5.6%,50px);
+    box-shadow:0 1px 2px rgba(21,25,23,.05),0 18px 40px -34px rgba(21,25,23,.5);}
+  @media (max-width:640px){.sheet{aspect-ratio:auto;padding:24px 20px 26px;} .wrap{padding:20px 12px 60px;gap:16px;}}
   .run{display:flex;gap:0 18px;font-family:"IBM Plex Mono",monospace;font-size:9.5px;
     letter-spacing:.13em;text-transform:uppercase;color:var(--ink-3);
     border-bottom:1.5px solid var(--ink);padding-bottom:8px;margin-bottom:18px;}
@@ -36,11 +38,15 @@
     letter-spacing:.05em;color:var(--accent);font-weight:600;white-space:nowrap;}
   .src{color:var(--ink-3);font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;font-weight:400;}
   @media (max-width:560px){.mm,.src{margin-left:0;flex-basis:100%;}}
-  .shotimg{display:flex;justify-content:center;background:#F7F7F5;border:1px solid var(--rule);}
-  .shotimg img{display:block;max-width:100%;height:auto;max-height:74vh;}
-  .vidwrap{display:flex;justify-content:center;background:#111;border:1px solid var(--rule);}
-  .vidwrap video{display:block;width:100%;max-width:420px;height:auto;max-height:78vh;background:#111;}
-  .body{margin-top:20px;}
+  .shotimg{flex:1;min-height:0;display:flex;align-items:flex-start;justify-content:center;}
+  .shotimg img{display:block;max-width:100%;max-height:100%;width:auto;height:auto;
+    border:1px solid var(--rule);}
+  .vidwrap{flex:1;min-height:0;display:flex;align-items:flex-start;justify-content:center;}
+  .vidwrap video{display:block;max-width:100%;max-height:100%;width:auto;height:auto;
+    background:#111;border:1px solid var(--rule);}
+  @media (max-width:640px){.shotimg,.vidwrap{flex:none;}
+    .shotimg img{max-height:70vh;} .vidwrap video{max-height:70vh;width:100%;max-width:420px;}}
+  .body{margin-top:18px;flex-shrink:0;}
   .body p{margin:0 0 10px;max-width:70ch;}
   .body p:last-child{margin-bottom:0;}
   .sg{font-size:14px;color:var(--ink-2);}
@@ -85,7 +91,7 @@
       <div class="gcard"><img src="img/art-front.jpg" alt="Tee front"><div class="gcap"><b>Front</b> &#183; centre chest lockup</div></div>
       <div class="gcard"><img src="img/art-back.jpg" alt="Tee back"><div class="gcap"><b>Back</b> &#183; full poster panel</div></div>
     </div>
-    <div class="body"><div class="blk" style="margin-top:26px"><h3>Non-negotiables</h3><ul class="bul"><li>4:5 native, 10 percent crop margin</li><li>White seamless, paper at 250 to 252 RGB</li><li>Tripod locked between front and back</li><li>Tethered, ColorChecker every garment</li><li>Steamer before every take</li><li>Lint roller on black</li></ul></div></div>
+    <div class="body" style="margin-top:auto"><div class="blk"><h3>Non-negotiables</h3><ul class="bul"><li>4:5 native, 10 percent crop margin</li><li>White seamless, paper at 250 to 252 RGB</li><li>Tripod locked between front and back</li><li>Tethered, ColorChecker every garment</li><li>Steamer before every take</li><li>Lint roller on black</li></ul></div></div>
   </article>
 
   <article class="sheet">
