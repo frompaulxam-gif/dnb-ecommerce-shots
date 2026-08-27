@@ -9,7 +9,7 @@
 <style>  :root{
     --sheetw:calc(min(880px, 100vw) - 40px);
     --paper:#EDEEEA; --sheet:#FFFFFF; --ink:#151917; --ink-2:#5C645F; --ink-3:#8A928C;
-    --rule:#D9DCD5; --accent:#0E6B45; --accent-soft:#E2EFE7; --flag:#9A4B14;
+    --rule:#D9DCD5; --accent:#0E6B45; --amber:#B35A0A; --accent-soft:#E2EFE7; --flag:#9A4B14;
   }
   *{box-sizing:border-box;}
   body{margin:0;background:var(--paper);color:var(--ink);
@@ -119,6 +119,17 @@
   .nomedia{flex:1;min-height:0;}
   @media (max-width:640px){.callout{border-width:2px;border-radius:2px;
     padding:14px 16px;margin-top:20px;} .nomedia{display:none;}}
+
+  .sheet.hl-green{border-color:var(--accent);
+    box-shadow:0 0 0 calc(var(--sheetw) * 0.001190) var(--accent),
+               0 1px 2px rgba(21,25,23,.05),0 18px 40px -34px rgba(21,25,23,.5);}
+  .sheet.hl-orange{border-color:var(--amber);
+    box-shadow:0 0 0 calc(var(--sheetw) * 0.001190) var(--amber),
+               0 1px 2px rgba(21,25,23,.05),0 18px 40px -34px rgba(21,25,23,.5);}
+  .src-green{color:var(--accent);font-weight:600;}
+  .src-orange{color:var(--amber);font-weight:600;}
+  @media (max-width:640px){.sheet.hl-green{box-shadow:0 0 0 1px var(--accent);}
+    .sheet.hl-orange{box-shadow:0 0 0 1px var(--amber);}}
 </style></head><body>
 <div class="wrap">
 
@@ -237,9 +248,9 @@
     <div class="vidwrap"><video controls playsinline preload="metadata" poster="poster-b.jpg" muted loop><source src="easywin-b.mp4" type="video/mp4">Your browser cannot play this video. <a href="easywin-b.mp4">Download it.</a></video></div>
     <div class="body"><ul class="bul"><li>Chest up, crop through the mouth, garment fills the frame</li><li>One colourway per cut, locked framing so the cuts register</li><li>Hands doing a different thing each time: cassette, mixer, chai, passport, mithai box</li><li>The action is what reveals the detail, embroidery, collar, print edge</li><li>56mm on the a6700, f/2.8, shoot 60p</li></ul></div>
   </article>
-  <article class="sheet">
+  <article class="sheet hl-green">
     <div class="run"><span>Daal &amp; Bass</span><span>Daal N Bass Ecommerce Shots</span><span>Easy win C</span></div>
-    <div class="head"><span class="code">EASY WIN C</span><h2>Studio setup, the whole build</h2><span class="src">No reference needed</span></div>
+    <div class="head"><span class="code">EASY WIN C</span><h2>Studio setup, the whole build</h2><span class="src src-green">This shoot day</span></div>
     <div class="nomedia"></div>
     <div class="body"><ul class="bul"><li>Phone on a tripod in the corner before anything goes up</li><li>Paper rolling down, stands going up, the first light test</li><li>Steaming, lint rolling, tape marks going down</li><li>Cut it to ten seconds, the caption does the selling</li><li>Costs nothing, you are doing the setup anyway</li></ul></div>
   </article>
@@ -249,9 +260,9 @@
     <div class="vidwrap"><video controls playsinline preload="metadata" poster="poster-d.jpg" muted loop><source src="easywin-d.mp4" type="video/mp4">Your browser cannot play this video. <a href="easywin-d.mp4">Download it.</a></video></div>
     <div class="body"><ul class="bul"><li>Garments pegged on a line strung across the frame</li><li>Model stands dead still, someone off camera swaps the piece in front of them</li><li>The line is the culture, hang the whole drop on it</li><li>Works outdoors on grass or indoors against the paper</li><li>Locked camera, 35mm on the a6700, shoot 60p</li></ul></div>
   </article>
-  <article class="sheet">
+  <article class="sheet hl-orange">
     <div class="run"><span>Daal &amp; Bass</span><span>Daal N Bass Ecommerce Shots</span><span>Easy win E</span></div>
-    <div class="head"><span class="code">EASY WIN E</span><h2>Front still, back moving</h2><span class="src">No reference needed</span></div>
+    <div class="head"><span class="code">EASY WIN E</span><h2>Front still, back moving</h2><span class="src src-orange">Another shoot day</span></div>
     <div class="nomedia"></div>
     <div class="body"><ul class="bul"><li>One person holds a still pose front of frame, sharp</li><li>Second person moves behind them, slightly soft</li><li>The back half carries the culture and the information</li><li>Same frame, one take, no cuts</li><li>56mm on the a6700, f/2.8, shoot 60p</li></ul></div>
   </article>
